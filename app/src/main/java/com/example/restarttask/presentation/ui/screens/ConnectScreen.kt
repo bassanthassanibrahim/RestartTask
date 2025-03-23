@@ -25,7 +25,7 @@ import com.example.restarttask.domain.model.StudyPartner
 @Composable
 fun ConnectScreen() {
     Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
-        Text("Connect",color = Color(0xFF146D6D), style = MaterialTheme.typography.headlineSmall, modifier = Modifier.padding(bottom = 8.dp))
+        Text("Connect",color = Color(0xFF146D6D), style = MaterialTheme.typography.headlineMedium, modifier = Modifier.padding(bottom = 8.dp))
         Text("Suggested Study Partners : ",color = Color(0xFF146D6D), style = MaterialTheme.typography.headlineMedium, modifier = Modifier.padding(bottom = 8.dp))
 
         val partners = listOf(
@@ -52,7 +52,7 @@ fun StudyPartnerCard(partner: StudyPartner) {
                 modifier = Modifier.size(50.dp)
             )
             Column(modifier = Modifier.padding(start = 16.dp)) {
-                Text(text = partner.name, color = Color(0xFF146D6D), style = MaterialTheme.typography.displayMedium)
+                Text(text = partner.name, color = Color(0xFF146D6D), style = MaterialTheme.typography.headlineMedium)
                 Text("Last seen Online: ${partner.lastSeen}", style = MaterialTheme.typography.bodyMedium)
                 Row {
                     partner.languages.forEach { lang ->
