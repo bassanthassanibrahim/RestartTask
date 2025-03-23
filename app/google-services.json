@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1020924737490",
+    "project_id": "restarttask",
+    "storage_bucket": "restarttask.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020924737490:android:6455161c74add32b243a0b",
+        "android_client_info": {
+          "package_name": "com.example.restarttask"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZyCqxUhzzXWKuKe1Ze_1gxHYGOXc0O84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

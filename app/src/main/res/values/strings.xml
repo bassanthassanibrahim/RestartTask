@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RestartTask</string>
+    <string name="home">Home</string>
+    <string name="hi">Hi User Name</string>
+    <string name="study">Study Plan</string>
+    <string name="splashText">welcome to:  how to use and enjoy Exam ate Tap anywhere on the screen to continue </string>
+</resources>
