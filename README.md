@@ -8,45 +8,45 @@ Tutorial Examate is an Android application built with Jetpack Compose to help us
 
 Features
 
-Bottom Navigation: Five tabs (Home, Connect, Questions, Tools, Profile) for easy navigation.
+- Bottom Navigation: Five tabs (Home, Connect, Questions, Tools, Profile) for easy navigation.
 
-Home Screen: Displays a welcome message and study resources.
+- Home Screen: Displays a welcome message and study resources.
 
-Connect Screen: Suggests study partners with filtering options.
+- Connect Screen: Suggests study partners with filtering options.
 
-Questions Screen: Provides a list of questions and answers for practice.
+- Questions Screen: Provides a list of questions and answers for practice.
 
-Tools Screen: Offers various study tools in a grid format.
+- Tools Screen: Offers various study tools in a grid format.
 
-Profile Screen: Shows user details including avatar, name, email, and phone number.
+- Profile Screen: Shows user details including avatar, name, email, and phone number.
 
-Google Sign-In: Secure authentication with Firebase.
+- Google Sign-In: Secure authentication with Firebase.
 
 
 
 Technologies Used
 
-Jetpack Compose: Modern UI toolkit for building native Android interfaces.
+- Jetpack Compose: Modern UI toolkit for building native Android interfaces.
 
-Navigation Component: Manages navigation between screens.
+- Navigation Component: Manages navigation between screens.
 
-Firebase Authentication: Enables Google Sign-In functionality.
+- Firebase Authentication: Enables Google Sign-In functionality.
 
-Clean Architecture: Ensures maintainability and separation of concerns.
+- Clean Architecture: Ensures maintainability and separation of concerns.
 
-Coil: Handles image loading efficiently.
+- Coil: Handles image loading efficiently.
 
 
 
 Architecture
 
-The app follows Clean Architecture principles:
+- The app follows Clean Architecture principles:
 
-Presentation Layer: Composables for UI.
+- Presentation Layer: Composables for UI.
 
-Domain Layer: Business logic and use cases.
+- Domain Layer: Business logic and use cases.
 
-Data Layer: Handles authentication and other data operations.
+- Data Layer: Handles authentication and other data operations.
 
 
 
@@ -56,8 +56,8 @@ Clone the repository:
 
 git clone https://github.com/bassanthassanibrahim/RestartTask.git
 
-Open the project in Android Studio.
+- Open the project in Android Studio.
 
-Add your Google Services JSON file for Firebase authentication.
+- Add your Google Services JSON file for Firebase authentication.
 
-Run the app on an emulator or a physical device.
+- Run the app on an emulator or a physical device.
