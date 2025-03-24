@@ -5,8 +5,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.background
+import androidx.compose.ui.unit.sp
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
@@ -18,6 +22,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.foundation.Image
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.foundation.layout.Box
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Alignment
 import androidx.compose.runtime.remember
@@ -29,8 +34,10 @@ import com.example.restarttask.domain.model.Tool
 
 @Composable
 fun ToolsScreen() {
-    Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
-        Text("Tools", color = Color(0xFF146D6D), style = MaterialTheme.typography.headlineMedium, modifier = Modifier.padding(bottom = 8.dp))
+    var showGridTooltip by remember { mutableStateOf(true) } // Show on first load
+
+   // Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
+     //   Text("Tools", color = Color(0xFF146D6D), style = MaterialTheme.typography.headlineMedium, modifier = Modifier.padding(bottom = 8.dp))
 
         val tools = listOf(
             Tool("Progress 100%", 100, R.drawable.tool),
@@ -45,9 +52,31 @@ fun ToolsScreen() {
 
         var selectedTool by remember { mutableStateOf(tools.first()) }
 
-        LazyVerticalGrid(columns = GridCells.Fixed(2), modifier = Modifier.fillMaxSize()) {
-            items(tools) { tool ->
-                ToolCard(tool, tool == selectedTool) { selectedTool = it }
+        Box(modifier = Modifier.fillMaxSize().clickable { showGridTooltip = false } ) {
+            Column(modifier = Modifier.padding(16.dp)) {
+                Text(
+                    "Tools",
+                    color = Color(0xFF146D6D),
+                    style = MaterialTheme.typography.headlineMedium,
+                    modifier = Modifier.padding(bottom = 8.dp)
+                )
+
+                LazyVerticalGrid(columns = GridCells.Fixed(2), modifier = Modifier.fillMaxSize()) {
+                    items(tools) { tool ->
+                        ToolCard(tool, tool == selectedTool) { selectedTool = it }
+                    }
+                }
+            }
+        if (showGridTooltip) {
+            Box(
+                modifier = Modifier
+                    .align(Alignment.TopStart) // Adjust position for first item
+                    .offset(x = 20.dp, y = 200.dp) // Below first item
+                    .background(Color(0xFF2C2C2C), shape = RoundedCornerShape(8.dp))
+                    .padding(10.dp)
+                    .clickable { showGridTooltip = false } // Dismiss on tap
+            ) {
+                Text("Tap a tool to get started!", color = Color.White, fontSize = 14.sp)
             }
         }
     }
